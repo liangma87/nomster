@@ -1,0 +1,100 @@
+2018-12-11T06:08:27.597465+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2018-12-11T06:08:27.600469+00:00 app[web.1]: === puma shutdown: 2018-12-11 06:08:27 +0000 ===
+2018-12-11T06:08:27.601382+00:00 app[web.1]: - Goodbye!
+2018-12-11T06:08:27.601783+00:00 app[web.1]: Exiting
+2018-12-11T06:08:27.763755+00:00 heroku[web.1]: Process exited with status 143
+2018-12-11T06:15:08.456131+00:00 heroku[web.1]: State changed from down to starting
+2018-12-11T06:15:07.471448+00:00 app[api]: Deploy ce9af4cf by user mliang3176@gmail.com
+2018-12-11T06:15:07.471448+00:00 app[api]: Release v17 created by user mliang3176@gmail.com
+2018-12-11T06:15:12.000000+00:00 app[api]: Build succeeded
+2018-12-11T06:15:15.232044+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 16404 -e production`
+2018-12-11T06:15:55.200023+00:00 app[web.1]: => Booting Puma
+2018-12-11T06:15:55.200047+00:00 app[web.1]: => Rails 5.2.1 application starting in production
+2018-12-11T06:15:55.200049+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2018-12-11T06:15:55.200055+00:00 app[web.1]: Puma starting in single mode...
+2018-12-11T06:15:55.200056+00:00 app[web.1]: * Version 3.12.0 (ruby 2.5.3-p105), codename: Llamas in Pajamas
+2018-12-11T06:15:55.200062+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2018-12-11T06:15:55.200064+00:00 app[web.1]: * Environment: production
+2018-12-11T06:15:55.200065+00:00 app[web.1]: * Listening on tcp://0.0.0.0:16404
+2018-12-11T06:15:55.200067+00:00 app[web.1]: Use Ctrl-C to stop
+2018-12-11T06:15:55.200074+00:00 app[web.1]: I, [2018-12-11T06:15:55.199882 #4]  INFO -- : [594bcd22-40f3-4569-aa13-5ecb5c185507] Started GET "/" for 73.252.241.214 at 2018-12-11 06:15:55 +0000
+2018-12-11T06:15:55.216534+00:00 app[web.1]: I, [2018-12-11T06:15:55.216396 #4]  INFO -- : [594bcd22-40f3-4569-aa13-5ecb5c185507] Processing by PlacesController#index as HTML
+2018-12-11T06:15:55.260597+00:00 app[web.1]: I, [2018-12-11T06:15:55.260470 #4]  INFO -- : [594bcd22-40f3-4569-aa13-5ecb5c185507]   Rendering places/index.html.erb within layouts/application
+2018-12-11T06:15:55.379869+00:00 app[web.1]: I, [2018-12-11T06:15:55.375618 #4]  INFO -- : [4cc904fd-6567-4443-b063-877e5ca329de] Started GET "/users/sign_in" for 73.252.241.214 at 2018-12-11 06:15:55 +0000
+2018-12-11T06:15:55.385509+00:00 app[web.1]: I, [2018-12-11T06:15:55.385375 #4]  INFO -- : [4cc904fd-6567-4443-b063-877e5ca329de] Processing by Devise::SessionsController#new as HTML
+2018-12-11T06:15:55.813112+00:00 app[web.1]: I, [2018-12-11T06:15:55.812989 #4]  INFO -- : [4cc904fd-6567-4443-b063-877e5ca329de] Redirected to https://nomster-liang.herokuapp.com/
+2018-12-11T06:15:55.813530+00:00 app[web.1]: I, [2018-12-11T06:15:55.813361 #4]  INFO -- : [4cc904fd-6567-4443-b063-877e5ca329de] Filter chain halted as :require_no_authentication rendered or redirected
+2018-12-11T06:15:55.814560+00:00 app[web.1]: I, [2018-12-11T06:15:55.813804 #4]  INFO -- : [4cc904fd-6567-4443-b063-877e5ca329de] Completed 302 Found in 428ms (ActiveRecord: 184.4ms)
+2018-12-11T06:15:55.821881+00:00 app[web.1]: D, [2018-12-11T06:15:55.821802 #4] DEBUG -- : [594bcd22-40f3-4569-aa13-5ecb5c185507]   [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:15:55.827053+00:00 app[web.1]: D, [2018-12-11T06:15:55.826985 #4] DEBUG -- : [594bcd22-40f3-4569-aa13-5ecb5c185507]   [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "places"[0m
+2018-12-11T06:15:55.828890+00:00 app[web.1]: I, [2018-12-11T06:15:55.828828 #4]  INFO -- : [594bcd22-40f3-4569-aa13-5ecb5c185507]   Rendered places/index.html.erb within layouts/application (563.0ms)
+2018-12-11T06:15:55.837078+00:00 app[web.1]: D, [2018-12-11T06:15:55.836996 #4] DEBUG -- : [594bcd22-40f3-4569-aa13-5ecb5c185507]   [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:15:55.838390+00:00 app[web.1]: I, [2018-12-11T06:15:55.838327 #4]  INFO -- : [594bcd22-40f3-4569-aa13-5ecb5c185507] Completed 200 OK in 613ms (Views: 590.2ms | ActiveRecord: 231.4ms)
+2018-12-11T06:15:55.843041+00:00 heroku[router]: at=info method=GET path="/" host=nomster-liang.herokuapp.com request_id=594bcd22-40f3-4569-aa13-5ecb5c185507 fwd="73.252.241.214" dyno=web.1 connect=0ms service=646ms status=200 bytes=2990 protocol=https
+2018-12-11T06:15:56.053234+00:00 heroku[router]: at=info method=GET path="/assets/application-1722c03bca20b08ff2354e25282aff22d9075ae12dd33d37d0f3174c8a1a1cb1.css" host=nomster-liang.herokuapp.com request_id=65c5c063-ad56-4f25-8736-b3c082e2fe39 fwd="73.252.241.214" dyno=web.1 connect=0ms service=13ms status=200 bytes=27278 protocol=https
+2018-12-11T06:15:59.156097+00:00 heroku[router]: at=info method=GET path="/places/1" host=nomster-liang.herokuapp.com request_id=892ca026-5ab0-432a-9a4b-d10c347b327d fwd="73.252.241.214" dyno=web.1 connect=0ms service=56ms status=500 bytes=1827 protocol=https
+2018-12-11T06:15:59.111681+00:00 app[web.1]: I, [2018-12-11T06:15:59.111577 #4]  INFO -- : [892ca026-5ab0-432a-9a4b-d10c347b327d] Started GET "/places/1" for 73.252.241.214 at 2018-12-11 06:15:59 +0000
+2018-12-11T06:15:59.115622+00:00 app[web.1]: I, [2018-12-11T06:15:59.115536 #4]  INFO -- : [892ca026-5ab0-432a-9a4b-d10c347b327d] Processing by PlacesController#show as HTML
+2018-12-11T06:15:59.115718+00:00 app[web.1]: I, [2018-12-11T06:15:59.115667 #4]  INFO -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]   Parameters: {"id"=>"1"}
+2018-12-11T06:15:59.124597+00:00 app[web.1]: D, [2018-12-11T06:15:59.124290 #4] DEBUG -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]   [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:15:59.129289+00:00 app[web.1]: I, [2018-12-11T06:15:59.129208 #4]  INFO -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]   Rendering places/show.html.erb within layouts/application
+2018-12-11T06:15:59.150851+00:00 app[web.1]: I, [2018-12-11T06:15:59.150735 #4]  INFO -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]   Rendered places/show.html.erb within layouts/application (20.8ms)
+2018-12-11T06:15:59.151140+00:00 app[web.1]: I, [2018-12-11T06:15:59.151086 #4]  INFO -- : [892ca026-5ab0-432a-9a4b-d10c347b327d] Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.6ms)
+2018-12-11T06:15:59.152248+00:00 app[web.1]: F, [2018-12-11T06:15:59.152192 #4] FATAL -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]
+2018-12-11T06:15:59.152325+00:00 app[web.1]: F, [2018-12-11T06:15:59.152278 #4] FATAL -- : [892ca026-5ab0-432a-9a4b-d10c347b327d] ActionView::Template::Error (undefined method `latitude' for #<Place:0x000055d7b57f8540>):
+2018-12-11T06:15:59.152527+00:00 app[web.1]: F, [2018-12-11T06:15:59.152472 #4] FATAL -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]     4:   <br/><br/>
+2018-12-11T06:15:59.152529+00:00 app[web.1]: [892ca026-5ab0-432a-9a4b-d10c347b327d]     5:   <p><%= @place.description %></p>
+2018-12-11T06:15:59.152531+00:00 app[web.1]: [892ca026-5ab0-432a-9a4b-d10c347b327d]     6:
+2018-12-11T06:15:59.152533+00:00 app[web.1]: [892ca026-5ab0-432a-9a4b-d10c347b327d]     7:   <% if @place.latitude.present? && @place.longitude.present? %>
+2018-12-11T06:15:59.152535+00:00 app[web.1]: [892ca026-5ab0-432a-9a4b-d10c347b327d]     8:     <script>
+2018-12-11T06:15:59.152537+00:00 app[web.1]: [892ca026-5ab0-432a-9a4b-d10c347b327d]     9:       function initMap() {
+2018-12-11T06:15:59.152539+00:00 app[web.1]: [892ca026-5ab0-432a-9a4b-d10c347b327d]    10:         var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+2018-12-11T06:15:59.152770+00:00 app[web.1]: F, [2018-12-11T06:15:59.152562 #4] FATAL -- : [892ca026-5ab0-432a-9a4b-d10c347b327d]
+2018-12-11T06:15:59.152845+00:00 app[web.1]: F, [2018-12-11T06:15:59.152802 #4] FATAL -- : [892ca026-5ab0-432a-9a4b-d10c347b327d] app/views/places/show.html.erb:7:in `_app_views_places_show_html_erb__3024422926241851477_47192475637600'
+2018-12-11T06:16:04.987416+00:00 heroku[router]: at=info method=GET path="/" host=nomster-liang.herokuapp.com request_id=ba9f246c-9f6c-43dd-b7f6-7449442258f5 fwd="73.252.241.214" dyno=web.1 connect=0ms service=62ms status=200 bytes=2992 protocol=https
+2018-12-11T06:16:04.929625+00:00 app[web.1]: I, [2018-12-11T06:16:04.929538 #4]  INFO -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5] Started GET "/" for 73.252.241.214 at 2018-12-11 06:16:04 +0000
+2018-12-11T06:16:04.939254+00:00 app[web.1]: I, [2018-12-11T06:16:04.939189 #4]  INFO -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5] Processing by PlacesController#index as HTML
+2018-12-11T06:16:04.944433+00:00 app[web.1]: I, [2018-12-11T06:16:04.944375 #4]  INFO -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5]   Rendering places/index.html.erb within layouts/application
+2018-12-11T06:16:04.952620+00:00 app[web.1]: D, [2018-12-11T06:16:04.952536 #4] DEBUG -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5]   [1m[36mPlace Load (5.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 0]]
+2018-12-11T06:16:04.955677+00:00 app[web.1]: D, [2018-12-11T06:16:04.955614 #4] DEBUG -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:16:04.958976+00:00 app[web.1]: D, [2018-12-11T06:16:04.958904 #4] DEBUG -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5]   [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "places"[0m
+2018-12-11T06:16:04.976884+00:00 app[web.1]: I, [2018-12-11T06:16:04.960691 #4]  INFO -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5]   Rendered places/index.html.erb within layouts/application (16.2ms)
+2018-12-11T06:16:04.981525+00:00 app[web.1]: D, [2018-12-11T06:16:04.981418 #4] DEBUG -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:16:04.983030+00:00 app[web.1]: I, [2018-12-11T06:16:04.982959 #4]  INFO -- : [ba9f246c-9f6c-43dd-b7f6-7449442258f5] Completed 200 OK in 43ms (Views: 30.1ms | ActiveRecord: 9.7ms)
+2018-12-11T06:16:05.089065+00:00 heroku[router]: at=info method=GET path="/assets/application-1722c03bca20b08ff2354e25282aff22d9075ae12dd33d37d0f3174c8a1a1cb1.css" host=nomster-liang.herokuapp.com request_id=42bb2722-25e4-449a-86d7-6c072e6a270b fwd="73.252.241.214" dyno=web.1 connect=0ms service=9ms status=304 bytes=48 protocol=https
+2018-12-11T06:16:05.089829+00:00 heroku[router]: at=info method=GET path="/assets/application-dfcf8f65f4bd1b8409b6703b65339a448caed1c8e2e043e8c606338d05a619ee.js" host=nomster-liang.herokuapp.com request_id=d1cf83ff-75ce-44f0-b120-8bca59d0e246 fwd="73.252.241.214" dyno=web.1 connect=0ms service=9ms status=304 bytes=48 protocol=https
+2018-12-11T06:16:05.192204+00:00 heroku[router]: at=info method=GET path="/assets/gaming-pattern-305632caa877e5ac829aaa9348e5d8fd1cf2afce74a917429da4858b33abc34f.png" host=nomster-liang.herokuapp.com request_id=8977ab2f-fb8b-4a64-b267-9addf60294ad fwd="73.252.241.214" dyno=web.1 connect=0ms service=2ms status=304 bytes=48 protocol=https
+2018-12-11T06:16:05.205070+00:00 heroku[router]: at=info method=GET path="/assets/folk-pattern-black-166a0ad4979aec888495b19ae9f254e1558253f07bfbec1ff16e29a13d393e44.png" host=nomster-liang.herokuapp.com request_id=af2c516d-1379-4880-aa21-cd8fda998c1c fwd="73.252.241.214" dyno=web.1 connect=0ms service=10ms status=304 bytes=48 protocol=https
+2018-12-11T06:16:05.473187+00:00 heroku[router]: at=info method=GET path="/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" host=nomster-liang.herokuapp.com request_id=429c1d5b-eb26-4a8e-8252-8cb08da5ce51 fwd="73.252.241.214" dyno=web.1 connect=1ms service=6ms status=304 bytes=48 protocol=https
+2018-12-11T06:16:05.480413+00:00 heroku[router]: at=info method=GET path="/assets/chunkfive-webfont-89a4f339c304333e756671668fd476d7271841eeaa2aad1e9a49b5064bb1c329.woff2" host=nomster-liang.herokuapp.com request_id=1d3e700c-0cf4-4e99-9a23-1b2acca11a42 fwd="73.252.241.214" dyno=web.1 connect=0ms service=15ms status=304 bytes=48 protocol=https
+2018-12-11T06:16:07.197693+00:00 app[web.1]: I, [2018-12-11T06:16:07.197591 #4]  INFO -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b] Started GET "/?page=2" for 73.252.241.214 at 2018-12-11 06:16:07 +0000
+2018-12-11T06:16:07.198734+00:00 app[web.1]: I, [2018-12-11T06:16:07.198666 #4]  INFO -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b] Processing by PlacesController#index as HTML
+2018-12-11T06:16:07.198834+00:00 app[web.1]: I, [2018-12-11T06:16:07.198777 #4]  INFO -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   Parameters: {"page"=>"2"}
+2018-12-11T06:16:07.200406+00:00 app[web.1]: I, [2018-12-11T06:16:07.200343 #4]  INFO -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   Rendering places/index.html.erb within layouts/application
+2018-12-11T06:16:07.213449+00:00 app[web.1]: D, [2018-12-11T06:16:07.213343 #4] DEBUG -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   [1m[36mPlace Load (2.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+2018-12-11T06:16:07.216953+00:00 app[web.1]: D, [2018-12-11T06:16:07.216875 #4] DEBUG -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:16:07.219663+00:00 app[web.1]: D, [2018-12-11T06:16:07.219595 #4] DEBUG -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "places"[0m
+2018-12-11T06:16:07.222755+00:00 app[web.1]: I, [2018-12-11T06:16:07.222654 #4]  INFO -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   Rendered places/index.html.erb within layouts/application (22.2ms)
+2018-12-11T06:16:07.233486+00:00 app[web.1]: D, [2018-12-11T06:16:07.233402 #4] DEBUG -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2018-12-11T06:16:07.234540+00:00 app[web.1]: I, [2018-12-11T06:16:07.234479 #4]  INFO -- : [fb1d2f73-39c0-4946-84f0-9d2957e13c6b] Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 7.7ms)
+2018-12-11T06:16:07.239769+00:00 heroku[router]: at=info method=GET path= "/?page=2" host=nomster-liang.herokuapp.com request_id=fb1d2f73-39c0-4946-84f0-9d2957e13c6b fwd="73.252.241.214" dyno=web.1 connect=0ms service=52ms status=200 bytes=3013 protocol=https
+2018-12-11T06:16:08.161736+00:00 heroku[router]: at=info method=GET path= "/?page=3" host=nomster-liang.herokuapp.com request_id=1daba939-2b00-414a-ab60-e2df13517016 fwd="73.252.241.214" dyno=web.1 connect=0ms service=47ms status=200 bytes=3006 protocol=https
+2018-12-11T06:16:09.047887+00:00 heroku[router]: at=info method=GET path="/places/3" host=nomster-liang.herokuapp.com request_id=80304aa7-2a3d-42fc-9381-3f62a7bfe1d2 fwd="73.252.241.214" dyno=web.1 connect=0ms service=26ms status=500 bytes=1827 protocol=https
+2018-12-11T06:16:09.020557+00:00 app[web.1]: I, [2018-12-11T06:16:09.020448 #4]  INFO -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2] Started GET "/places/3" for 73.252.241.214 at 2018-12-11 06:16:09 +0000
+2018-12-11T06:16:09.021614+00:00 app[web.1]: I, [2018-12-11T06:16:09.021536 #4]  INFO -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2] Processing by PlacesController#show as HTML
+2018-12-11T06:16:09.021706+00:00 app[web.1]: I, [2018-12-11T06:16:09.021627 #4]  INFO -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]   Parameters: {"id"=>"3"}
+2018-12-11T06:16:09.027150+00:00 app[web.1]: D, [2018-12-11T06:16:09.027068 #4] DEBUG -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]   [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+2018-12-11T06:16:09.028034+00:00 app[web.1]: I, [2018-12-11T06:16:09.027953 #4]  INFO -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]   Rendering places/show.html.erb within layouts/application
+2018-12-11T06:16:09.042390+00:00 app[web.1]: I, [2018-12-11T06:16:09.042296 #4]  INFO -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]   Rendered places/show.html.erb within layouts/application (14.2ms)
+2018-12-11T06:16:09.042610+00:00 app[web.1]: I, [2018-12-11T06:16:09.042539 #4]  INFO -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2] Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+2018-12-11T06:16:09.044304+00:00 app[web.1]: F, [2018-12-11T06:16:09.044232 #4] FATAL -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]
+2018-12-11T06:16:09.044368+00:00 app[web.1]: F, [2018-12-11T06:16:09.044304 #4] FATAL -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2] ActionView::Template::Error (undefined method `latitude' for #<Place:0x000055d7b5261de8>):
+2018-12-11T06:16:09.044621+00:00 app[web.1]: F, [2018-12-11T06:16:09.044555 #4] FATAL -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]     4:   <br/><br/>
+2018-12-11T06:16:09.044624+00:00 app[web.1]: [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]     5:   <p><%= @place.description %></p>
+2018-12-11T06:16:09.044627+00:00 app[web.1]: [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]     6:
+2018-12-11T06:16:09.044629+00:00 app[web.1]: [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]     7:   <% if @place.latitude.present? && @place.longitude.present? %>
+2018-12-11T06:16:09.044632+00:00 app[web.1]: [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]     8:     <script>
+2018-12-11T06:16:09.044635+00:00 app[web.1]: [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]     9:       function initMap() {
+2018-12-11T06:16:09.044637+00:00 app[web.1]: [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]    10:         var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+2018-12-11T06:16:09.044675+00:00 app[web.1]: F, [2018-12-11T06:16:09.044616 #4] FATAL -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2]
+2018-12-11T06:16:09.044767+00:00 app[web.1]: F, [2018-12-11T06:16:09.044682 #4] FATAL -- : [80304aa7-2a3d-42fc-9381-3f62a7bfe1d2] app/views/places/show.html.erb:7:in `_app_views_places_show_html_erb__3024422926241851477_47192475637600'

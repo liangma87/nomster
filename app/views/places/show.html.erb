@@ -3,7 +3,7 @@
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
-
+  ENV['GEOCODER_API_KEY']
   <% if @place.latitude.present? && @place.longitude.present? %>
     <script>
       function initMap() {
