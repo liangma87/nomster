@@ -4,9 +4,11 @@
 # components.
 # See https://github.com/plataformatec/simple_form#custom-components to know
 # more about custom components.
+# Each only takes block as argument
 # Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
 #
 # Use this setup block to configure all options available in SimpleForm.
+# Pass the do |config| end block argument to SF.setup
 SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a
   # complete input. You can remove any component from the
