@@ -26,10 +26,6 @@
   margin-bottom: 0;
 }
 
-.nav-link-center {
-  align-items: center;
-}
-
 .form-check-align {
   position: relative;
   margin: 0;
@@ -61,9 +57,13 @@
   text-align: center;
 }
 
+.carousel-no-overflow {
+  overflow: scroll;
+}
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
   height: 400px;
-  width: 50%;
+  object-fit: cover;
+  /*width: 50%;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -84,10 +84,36 @@
 .carousel {
   /*box-shadow: 0px 3px 8px #2a2a2a;*/
 }
-
 .user_profile {
   height: 200px;
   width: auto;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 85%;
+}
+
+.text-muted {
+    color: #636c72 !important;
+}
+
+.footer-links {
+  font-weight: 500;
+  color: #464a4c;
+}
+.footer-links a {
+  font-weight: 500;
+  color: #464a4c;
+}
+.footer-links li{
+  display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -95,14 +121,24 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
-body, html {
+ul {
+  list-style-type: none;
+}
+
+body {
   /*background: image_url('gaming-pattern.png');*/
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   /* The image used */
-  background: image_url('octopath.jpg');
+  /*background: image_url('octopath.jpg');*/
   /* Full height */
-  height: 100%;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  min-height: 100vh;
+  /*height: 100%;*/
   /* Center and scale the image nicely */
+  /*background-color: #f5f5f5;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

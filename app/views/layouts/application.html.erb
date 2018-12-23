@@ -17,7 +17,7 @@
       <%= link_to 'Nomster', root_path, class: 'navbar-brand'%>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-md-0 nav-link-center">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item">
             <%= link_to new_place_path, class: 'nav-link' do %>
             <i class="fa fa-plus-circle"></i>
@@ -25,7 +25,7 @@
             <% end %>
           </li>
         </ul>
-        <ul class="navbar nav-link-center">
+        <ul class="navbar-nav">
           <% if user_signed_in? %>
             <li class="nav-item">
               <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>
@@ -51,5 +51,18 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <%= yield %>
+    <div class="footer text-muted">
+      <ul class="footer-links">
+        <li>
+        <a href="https://github.com/louis000/nomster">GitHub</a>
+        </li>
+        <li>
+          <a href="https://nomster-liang.herokuapp.com/">Nomster</a>
+        </li>
+      <p>
+        Designed and built with all the love in the world by @liangma
+      </p>
+    </div>
   </body>
+
 </html>

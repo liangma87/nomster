@@ -1,29 +1,33 @@
-<% if true %>
-<div class="apple_pagination no_padding">
-<%end%>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div class="apple_pagination no_padding ">
+  <div id="carouselExampleIndicators" class="carousel slide col-10 offset-1" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner carousel-no-overflow" role="listbox">
       <div class="carousel-item active">
         <%= image_tag 'youpomian.png', class: 'd-block img-fluid' %>
+        <%= image_tag 'youpomian.png', class: 'd-block img-fluid' %>
+        <%= image_tag 'youpomian.png', class: 'd-block img-fluid' %>
         <div class="carousel-caption d-none d-md-block">
-          <h3>Find the best Noodle places</h3>
+          <h3>Find the best Noodle places!!</h3>
         </div>
       </div>
       <div class="carousel-item">
         <%= image_tag 'saozimian.jpg', class: 'd-block img-fluid' %>
+        <%= image_tag 'saozimian.jpg', class: 'd-block img-fluid' %>
+        <%= image_tag 'saozimian.jpg', class: 'd-block img-fluid' %>
         <div class="carousel-caption d-none d-md-block">
-          <h3>Yummy Noodle!!</h3>
+          <h3>Love burgers??</h3>
         </div>
       </div>
       <div class="carousel-item">
         <%= image_tag 'liang_pi.png', class: 'd-block img-fluid' %>
+        <%= image_tag 'liang_pi.png', class: 'd-block img-fluid' %>
+        <%= image_tag 'liang_pi.png', class: 'd-block img-fluid' %>
         <div class="carousel-caption d-none d-md-block">
-          <h3>Yummy Cold Noodle!!</h3>
+          <h3>Try something different!!</h3>
         </div>
       </div>
     </div>
@@ -60,9 +64,6 @@
       <%end%>
 
     </div>
-    <hr />
   <%end%>
-<%if true%>
   <%= will_paginate @places, :container => false %>
 </div>
-<%end%>
