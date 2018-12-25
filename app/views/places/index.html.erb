@@ -1,56 +1,50 @@
-<div class="apple_pagination no_padding ">
-  <div id="carouselExampleIndicators" class="carousel slide col-10 offset-1" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner carousel-no-overflow" role="listbox">
-      <div class="carousel-item active">
-        <%= image_tag 'youpomian.png', class: 'd-block img-fluid' %>
-        <%= image_tag 'youpomian.png', class: 'd-block img-fluid' %>
-        <%= image_tag 'youpomian.png', class: 'd-block img-fluid' %>
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Find the best Noodle places!!</h3>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag 'saozimian.jpg', class: 'd-block img-fluid' %>
-        <%= image_tag 'saozimian.jpg', class: 'd-block img-fluid' %>
-        <%= image_tag 'saozimian.jpg', class: 'd-block img-fluid' %>
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Love burgers??</h3>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag 'liang_pi.png', class: 'd-block img-fluid' %>
-        <%= image_tag 'liang_pi.png', class: 'd-block img-fluid' %>
-        <%= image_tag 'liang_pi.png', class: 'd-block img-fluid' %>
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Try something different!!</h3>
-        </div>
+<div id="carouselExampleIndicators" class="carousel slide col-10 offset-1" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner carousel-no-overflow" role="listbox">
+    <div class="carousel-item active">
+      <%= image_tag '3-mini-burger.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'chicken-burger.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'counter-burger.jpg', class: 'd-block img-fluid' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Love burgers??</h3>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <%= image_tag 'ramen.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'youpomian.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'hunanmifen.jpg', class: 'd-block img-fluid' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Find the best Noodle places!!</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'somecake.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'duck.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'brunch.jpg', class: 'd-block img-fluid' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Try something different!!</h3>
+      </div>
+    </div>
   </div>
-
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="apple_pagination no_padding ">
   <% @places.each do |place| %>
     <div class="booyah-box col-10 offset-1">
       <h1><%= link_to place.name, place_path(place) %></h1><br />
       <i><%= place.address %></i><br /><br />
       <p><%= place.description %></p><br />
-
-      <% if place.user.present? %>
-        <small><%= place.user.email %></small>
-      <%end%>
-
       <% if place.comments.present? %>
         <div class="col-12">
           <blockquote>

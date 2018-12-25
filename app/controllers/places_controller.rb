@@ -26,6 +26,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     @comment = Comment.new
     @photo = Photo.new
+    @place_photos = @place.photos.last(9).reverse
   end
 
   def edit
