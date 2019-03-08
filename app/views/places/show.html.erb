@@ -52,24 +52,15 @@
     </ol>
     <div class="carousel-inner carousel-no-overflow" role="listbox">
       <div class="carousel-item active">
-        <% @place_photos[0,3].each do |photo| %>
-        <%= image_tag photo.picture.url, class: 'd-block img-fluid'%>
-        <% end %>
+        <%= render "photos", photos: @place_photos[0...3] %>
       </div>
       <% if @place_photos.length > 3%>
-      <div class="carousel-item">
-        <% @place_photos[3,6].each do |photo| %>
-        <%= image_tag photo.picture.url, class: 'd-block img-fluid'%>
+        <% @place_photos[3..-1].each_slice(3) do |place_photos| %>
+          <div class="carousel-item">
+            <%= render "photos", photos: place_photos%>
+          </div>
         <% end %>
-      </div>
-      <%end%>
-      <% if @place_photos.length > 6%>
-        <div class="carousel-item">
-          <% @place_photos[6,9].each do |photo| %>
-          <%= image_tag photo.picture.url, class: 'd-block img-fluid'%>
-          <%end%>
-        </div>
-      <%end%>
+      <% end %>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
